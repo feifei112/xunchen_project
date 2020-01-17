@@ -1,3 +1,4 @@
+from data.read_data import data_yaml
 from page.factory_page import FactoryPage
 from utils import init_driver
 import pytest
@@ -11,8 +12,8 @@ class TestChen(object):
         yield
         time.sleep(3)
         self.driver.quit()
-
-   def test_xun_chen(self):
+   @pytest.mark.parametrize("phone,pwd",data_yaml())
+   def test_xun_chen(self,phone,pwd):
         # 击击稍后更新
         # self.factor_page.index_page().base_click_element()
         #我的 按钮
@@ -27,4 +28,4 @@ class TestChen(object):
         # self.factor_page.mine_page().click_log()
         # #点击确认
         # self.factor_page.mine_page().click_confirm_btn()
-        self.factor_page.mine_page().account_login("13288834897","w123456789")
+        self.factor_page.mine_page().account_login(phone,pwd)
