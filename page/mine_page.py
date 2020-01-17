@@ -10,6 +10,7 @@ class MinePage(BasePage):
     pwd_log = page.pwd_log   # 密码
     log = page.log  # 登录
     confirm_btn = page.confirm_btn  # 确认
+    user_name = page.user_name  # 用户名
 
     # 输入 手机号码
     # def input_phone_log(self,phone):
@@ -30,3 +31,5 @@ class MinePage(BasePage):
         self.base_input_short(self.pwd_log, pwd)
         self.base_click_element(self.log)
         self.base_click_element(self.confirm_btn)
+    def user_name_text(self):
+        return self.base_short_element(self.user_name).text

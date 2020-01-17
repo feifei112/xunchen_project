@@ -10,7 +10,7 @@ def data_yaml():
         data = yaml.safe_load(f)
         data_list = []
         for n in data:
-            data_list.append((n.get("phone"),n.get("pwd")))
+            data_list.append((n.get("phone"),n.get("pwd"),n.get("expect")))
         print(data_list)
         return data_list
 

@@ -12,8 +12,8 @@ class TestChen(object):
         yield
         time.sleep(3)
         self.driver.quit()
-   @pytest.mark.parametrize("phone,pwd",data_yaml())
-   def test_xun_chen(self,phone,pwd):
+   @pytest.mark.parametrize("phone,pwd,expect",data_yaml())
+   def test_xun_chen(self,phone,pwd,expect):
         # 击击稍后更新
         # self.factor_page.index_page().base_click_element()
         #我的 按钮
@@ -29,3 +29,5 @@ class TestChen(object):
         # #点击确认
         # self.factor_page.mine_page().click_confirm_btn()
         self.factor_page.mine_page().account_login(phone,pwd)
+        user_text = self.factor_page.mine_page().user_name_text()
+        assert user_text in expect

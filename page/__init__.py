@@ -10,7 +10,7 @@ mine = (By.XPATH,"//*[contains(@text,'我的')]")   # 我的 按钮
 
 # 我的页面
 login_reg =(By.ID,"com.bjcsxq.chat.carfriend:id/mine_username_tv")   # 登录按钮
-
+user_name = (By.ID,"com.bjcsxq.chat.carfriend:id/mine_username_tv")  # 用户名
 # 登录的页面
 phone_log = (By.ID,"com.bjcsxq.chat.carfriend:id/login_phone_et") # 手机号码
 pwd_log = (By.ID,"com.bjcsxq.chat.carfriend:id/login_pwd_et") #密码
