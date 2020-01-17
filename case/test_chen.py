@@ -22,9 +22,9 @@ class TestChen(object):
         # 输入手机号码
         # self.factor_page.mine_page().input_phone_log("13288834897")
         # # 输入密码
-        # self.factor_page.mine_page().input_pwd_log("13288834897")
+        # self.factor_page.mine_page().input_pwd_log("w123456789")
         # # 点击登录
         # self.factor_page.mine_page().click_log()
         # #点击确认
         # self.factor_page.mine_page().click_confirm_btn()
-        self.factor_page.mine_page().account_login("13288834897","13288834897")
+        self.factor_page.mine_page().account_login("13288834897","w123456789")
